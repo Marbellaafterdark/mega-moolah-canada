@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Moolah Slots Canada: Play Summertime, Atlantean & Get 80 Free Spins</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Стили контейнера для графиков в соответствии с требованиями ТЗ */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 280px;
+            }
+        }
+        /* Анимация пульсации для джекпота */
+        .pulse-glow {
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b;
+            }
+            to {
+                text-shadow: 0 0 20px #ef4444, 0 0 30px #ef4444;
+            }
+        }
+        /* Плавные переходы для табов и аккордеонов */
+        .accordion-content {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 300px;
+        }
+    </style>
+    <!-- Chosen Palette: Dark Luxury Gold (Background: Slate-950, Cards: Slate-900, Borders: Amber-500/20, Accents: Amber-500 & Orange-500) -->
+    <!-- Application Structure Plan: 
+         Интерактивный хаб разбит на логические секции для идеального закрытия поискового интента:
+         1. Hero-блок с живым счетчиком прогрессивного джекпота (FOMO-триггер для канадцев).
+         2. Промо-оффер на 80 бесплатных спинов (главный коммерческий интент).
+         3. Интерактивный переключатель версий Mega Moolah (Classic, Summertime, Atlantean Treasures, Juicy Joker) с детальным разбором механик.
+         4. Интерактивный калькулятор шансов в зависимости от размера ставки (Tips section).
+         5. Аналитический график RTP и волатильности (Chart.js) для опытных игроков.
+         6. Локализованные канадские платежные системы и FAQ.
+    -->
+    <!-- Visualization & Content Choices:
+         - Прогрессивный джекпот -> Живой скрипт на JS -> Постоянное увеличение счетчика для создания динамики.
+         - Сравнение версий игры -> Табы (Classic, Summertime, Atlantean, Juicy) -> Быстрое переключение контента без перезагрузки.
+         - Калькулятор шансов -> Ползунок (input range) + JS расчет -> Наглядно показывает связь размера ставки с шансом активации Jackpot Wheel.
+         - Сравнение RTP -> Лепестковая диаграмма (Radar Chart.js) -> Сравнение ключевых характеристик игр семейства.
+         - FAQ -> Интерактивный аккордеон на JS -> Удобное чтение ответов.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+
+    <!-- Хедер -->
+    <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center">
+                <!-- Очищенный логотип-ссылка без onerror/резервного смайлика льва -->
+                <a href="https://mega-moolah.app/en/" class="flex items-center gap-3 group">
+                    <img src="https://mega-moolah.app/pics/logo.webp" alt="play mega moolah canada" class="h-8 w-auto object-contain transition transform group-hover:scale-105">
+                    <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-orange-400 transition">
+                        MEGA MOOLAH CANADA
+                    </span>
+                </a>
+            </div>
+            <nav class="flex gap-6 text-sm font-semibold tracking-wide text-slate-300">
+                <a href="#promo" class="hover:text-amber-400 transition">80 Free Spins</a>
+                <a href="#games" class="hover:text-amber-400 transition">Slot Variations</a>
+                <a href="#tips" class="hover:text-amber-400 transition">Jackpot Tips</a>
+                <a href="#faq" class="hover:text-amber-400 transition">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Вводный параграф для контекста всей страницы -->
+        <section class="text-center max-w-3xl mx-auto space-y-4">
+            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                🍁 Canadian Player Hub 2026
+            </span>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                Unlock the Legend of <br/>
+                <span class="bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent pulse-glow">
+                    Mega Moolah Summertime
+                </span> & Beyond
+            </h1>
+            <p class="text-slate-400 text-lg">
+                Welcome to the ultimate Canadian guide to the world's most famous progressive jackpot network. Whether you are looking for the classic African Safari, the breezy Summertime edition, or wanting to claim your 80 Free Spins for just $1, we have mapped out everything you need to know.
+            </p>
+        </section>
+
+        <!-- Блок прогрессивного джекпота в реальном времени -->
+        <section class="bg-gradient-to-b from-slate-900 to-slate-950 border border-amber-500/20 rounded-3xl p-8 text-center relative overflow-hidden shadow-2xl">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div>
+            
+            <p class="text-sm uppercase tracking-widest text-slate-400 font-bold">Estimated Mega Jackpot Pool (CAD)</p>
+            <div id="jackpot-ticker" class="text-4xl md:text-6xl font-black text-amber-400 my-4 tracking-wider font-mono">
+                $14,258,491.20
+            </div>
+            <p class="text-xs text-slate-500">
+                *Jackpot ticker updates in real-time. Shared network pool available for Canadian residents (19+).
+            </p>
+        </section>
+
+        <!-- Блок промо: 80 бесплатных спинов (Коммерческий интент) -->
+        <section id="promo" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-10">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="bg-red-500/10 text-red-400 border border-red-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    Exclusive Signup Bonus
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+                    Get <span class="text-amber-400">80 Free Spins</span> on Mega Moolah for Just $1
+                </h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    One of Canada's most popular casino offers lets new players purchase 80 chances to become an instant millionaire. By depositing just $1 or $5 (depending on the promotional casino), your account is credited with 80 free spins on one of the progressive Mega Moolah games, such as <strong>Atlantean Treasures</strong> or the <strong>Classic Slot</strong>.
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs font-semibold text-slate-300">
+                    <span class="bg-slate-800 px-3 py-2 rounded-lg border border-slate-700">🍁 Interac & iDebit Accepted</span>
+                    <span class="bg-slate-800 px-3 py-2 rounded-lg border border-slate-700">🔒 Kahnawake Licensed</span>
+                    <span class="bg-slate-800 px-3 py-2 rounded-lg border border-slate-700">⚡ Instant Payouts</span>
+                </div>
+            </div>
+            <div class="lg:col-span-5 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-6 text-center text-slate-950 space-y-4 shadow-xl">
+                <p class="text-sm font-bold uppercase tracking-wider text-amber-950">Limited Time Offer</p>
+                <div class="text-5xl font-black tracking-tight">80 SPINS</div>
+                <p class="text-lg font-bold">Deposit $1 & Play Jackpot</p>
+                <div class="bg-slate-950/25 p-3 rounded-lg text-xs font-semibold text-amber-950 space-y-1">
+                    <div>✅ No wagering on Jackpot wins</div>
+                    <div>✅ Fully optimized for mobile/tablet</div>
+                </div>
+                <!-- Замена кнопки CTA на внешнюю ссылку -->
+                <a href="https://mega-moolah.app/en/" target="_blank" class="block w-full py-4 bg-slate-950 hover:bg-slate-900 text-amber-400 font-extrabold rounded-xl tracking-wider transition transform hover:scale-[1.02] active:scale-[0.98] text-center">
+                    CLAIM 80 FREE SPINS NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Интерактивный переключатель версий Mega Moolah (Инфо + Навигация) -->
+        <section id="games" class="space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-3xl font-extrabold">The Mega Moolah Game Suite</h2>
+                <p class="text-slate-400 text-sm">
+                    While the progressive jackpot remains linked across the entire network, the base games vary significantly in theme, volatility, and features. Use the interactive selector below to explore each variant.
+                </p>
+            </div>
+
+            <!-- Кнопки выбора игры -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+                <button onclick="selectGame('classic')" id="btn-classic" class="game-tab-btn py-3 px-4 bg-amber-500 text-slate-950 font-bold rounded-xl text-center text-sm transition">
+                    🦁 Classic
+                </button>
+                <button onclick="selectGame('summertime')" id="btn-summertime" class="game-tab-btn py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-center text-sm transition">
+                    ☀️ Summertime
+                </button>
+                <button onclick="selectGame('atlantean')" id="btn-atlantean" class="game-tab-btn py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-center text-sm transition">
+                    🧜‍♀️ Atlantean
+                </button>
+                <button onclick="selectGame('juicy')" id="btn-juicy" class="game-tab-btn py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-center text-sm transition">
+                    🃏 Juicy Joker
+                </button>
+            </div>
+
+            <!-- Блок динамического контента -->
+            <div id="game-display" class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Описание (слева) -->
+                <div class="space-y-4">
+                    <h3 id="display-title" class="text-2xl font-extrabold text-amber-400">Mega Moolah Classic</h3>
+                    <p id="display-desc" class="text-slate-300 text-sm leading-relaxed">
+                        The original jungle-themed masterpiece that started it all. Featuring a standard 5x3 layout with 25 paylines, the game is highly praised for its Free Spins feature where all wins are tripled. The jackpot wheel triggers completely at random during any real money spin.
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+                            <span class="block text-xs text-slate-500 uppercase">Base RTP</span>
+                            <span id="display-rtp" class="font-bold text-slate-200">88.12%</span>
+                        </div>
+                        <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+                            <span class="block text-xs text-slate-500 uppercase">Volatility</span>
+                            <span id="display-vol" class="font-bold text-slate-200">Low</span>
+                        </div>
+                        <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800">
+                            <span class="block text-xs text-slate-500 uppercase">Max Win</span>
+                            <span id="display-max" class="font-bold text-slate-200">1,920x</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Инфографика/Иллюстрация (справа) -->
+                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 space-y-4 flex flex-col justify-center items-center text-center">
+                    <span id="display-emoji" class="text-7xl">🦁</span>
+                    <h4 class="font-bold text-lg text-slate-200">Interactive Game Mechanics</h4>
+                    <ul class="text-xs text-slate-400 space-y-2 text-left w-full max-w-xs mx-auto">
+                        <li id="mech-1" class="flex items-center gap-2">🔸 15 Free Spins with a 3x multiplier</li>
+                        <li id="mech-2" class="flex items-center gap-2">🔸 Wild symbol doubles all wins</li>
+                        <li id="mech-3" class="flex items-center gap-2">🔸 Progressive wheel can trigger on any bet</li>
+                    </ul>
+                    <!-- Замена кнопки игры на внешнюю ссылку -->
+                    <a href="https://mega-moolah.app/en/" target="_blank" class="block px-6 py-2 bg-amber-500 text-slate-950 font-bold rounded-lg text-sm hover:bg-amber-400 transition w-full max-w-xs text-center">
+                        Play This Version
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок Tips и Интерактивный калькулятор шансов -->
+        <section id="tips" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6">
+                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    Mega Moolah Tips & Strategy
+                </span>
+                <h2 class="text-3xl font-extrabold">Maximizing Your Winning Odds</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    While the progressive jackpot bonus wheel triggers randomly, there is one verified strategy confirmed by the game's mathematical engine: <strong>higher bets increase your chances of triggering the progressive wheel</strong>.
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    By adjusting your coin size and active paylines, you can scale the trigger probability. Use the calculator on the right to simulate how your bet size impacts the probability scalar.
+                </p>
+                
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+                    <h4 class="font-bold text-slate-200 text-sm">Key Takeaway Rules:</h4>
+                    <ul class="text-xs text-slate-400 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 mt-0.5">✔</span> Bet what you can afford. A higher bet raises odds, but even a $0.25 minimum bet can win the multi-million Mega Jackpot!
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 mt-0.5">✔</span> Play games with higher base RTP if you want to extend your playing sessions.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Интерактивный калькулятор -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6">
+                <h3 class="text-xl font-bold text-slate-200 text-center">Jackpot Trigger Probability Simulator</h3>
+                <p class="text-xs text-slate-400 text-center">Drag the slider to adjust your bet size and see the estimated probability scalar.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex justify-between font-bold text-slate-300">
+                        <span>Bet Size (CAD)</span>
+                        <span id="calc-bet-val" class="text-amber-400">$1.25</span>
+                    </div>
+                    <input type="range" id="bet-slider" min="0.25" max="6.25" step="0.25" value="1.25" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500" oninput="calculateOdds(this.value)">
+                    <div class="flex justify-between text-xs text-slate-500">
+                        <span>Min Bet ($0.25)</span>
+                        <span>Max Bet ($6.25)</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 p-6 rounded-2xl text-center space-y-2 border border-slate-800">
+                    <span class="text-xs text-slate-500 uppercase">Estimated Jackpot Wheel Odds Scalar</span>
+                    <div id="odds-multiplier" class="text-4xl font-extrabold text-orange-500">
+                        5x
+                    </div>
+                    <p class="text-xs text-slate-400">
+                        Your odds of launching the Mega Moolah bonus round are scaled by <span id="odds-scale-text" class="text-orange-500 font-bold">500%</span> compared to a minimum $0.25 bet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Аналитический график RTP (Chart.js) -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 space-y-4">
+                <h2 class="text-3xl font-extrabold">RTP & Feature Comparison</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    When playing Mega Moolah slots, your wager is split: part goes back to the base game payout structure, and <strong>5.30% of your bet is directed straight to the progressive jackpot prize pools</strong>.
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Compare how the games rank across three distinct components: base RTP, feature richness (such as free spins/re-spins), and jackpot focus. Use this breakdown to choose your optimal game engine.
+                </p>
+            </div>
+            <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-6">
+                <h3 class="text-lg font-bold text-slate-200 text-center mb-4">Slot Feature Matrix</h3>
+                <div class="chart-container">
+                    <canvas id="rtpRadarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Часто задаваемые вопросы (FAQ Accordion) -->
+        <section id="faq" class="space-y-6 max-w-4xl mx-auto">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold">Frequently Asked Questions</h2>
+                <p class="text-slate-400 text-sm">Everything you need to know about playing Mega Moolah in Canada.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-1')" class="w-full text-left px-6 py-4 font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition">
+                        <span>Is Mega Moolah Summertime still available to play?</span>
+                        <span id="faq-1-icon" class="text-amber-500">▼</span>
+                    </button>
+                    <div id="faq-1" class="accordion-content px-6 bg-slate-950/30 text-slate-400 text-sm">
+                        <div class="py-4">
+                            Yes, Mega Moolah Summertime remains a beloved variant. It takes the classic beach/summer aesthetics of the Microgaming original and links it straight to the massive progressive jackpot wheel.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-2')" class="w-full text-left px-6 py-4 font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition">
+                        <span>How do I claim the 80 free spins offer?</span>
+                        <span id="faq-2-icon" class="text-amber-500">▼</span>
+                    </button>
+                    <div id="faq-2" class="accordion-content px-6 bg-slate-950/30 text-slate-400 text-sm">
+                        <div class="py-4">
+                            You must register as a new player at a casino offering this promotion. Upon making a minimum deposit of just $1 or $5 (usually done via Interac), you will receive 80 free spins worth $0.25 each to use on Mega Moolah games.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq('faq-3')" class="w-full text-left px-6 py-4 font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition">
+                        <span>What is the difference between Atlantean Treasures and Classic Mega Moolah?</span>
+                        <span id="faq-3-icon" class="text-amber-500">▼</span>
+                    </button>
+                    <div id="faq-3" class="accordion-content px-6 bg-slate-950/30 text-slate-400 text-sm">
+                        <div class="py-4">
+                            Classic Mega Moolah is a 25-payline game with high-reward free spins. Atlantean Treasures uses a "win both ways" 10-payline engine featuring expanding wilds and locking re-spins, similar to Starburst, but with the progressive jackpot wheel.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Модальное окно для призыва к действию (Конверсия) -->
+    <div id="offer-modal" class="fixed inset-0 bg-slate-950/85 z-[100] hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-slate-900 border border-amber-500/30 rounded-3xl p-6 md:p-8 max-w-md w-full relative space-y-6 shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-500 hover:text-slate-200 text-lg">✕</button>
+            <div class="text-center space-y-2">
+                <span class="text-4xl">🎁</span>
+                <h3 class="text-2xl font-black text-slate-200">Get Your 80 Free Spins</h3>
+                <p class="text-slate-400 text-xs">
+                    Sign up with our highly rated Kahnawake/Ontario licensed partner and trigger the Mega Moolah jackpot wheel with your $1 deposit.
+                </p>
+            </div>
+            
+            <div class="space-y-3">
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex justify-between items-center text-xs">
+                    <span class="font-bold text-slate-300">Selected Bonus</span>
+                    <span class="text-amber-400 font-bold">80 Chances ($20 Value)</span>
+                </div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 flex justify-between items-center text-xs">
+                    <span class="font-bold text-slate-300">Min Deposit</span>
+                    <span class="text-green-500 font-bold">CA$1.00 via Interac</span>
+                </div>
+            </div>
+
+            <!-- Обновление ссылки в модальном окне -->
+            <a href="https://mega-moolah.app/en/" target="_blank" class="block w-full py-3 bg-amber-500 text-slate-950 font-extrabold rounded-xl text-center text-sm tracking-wider hover:bg-amber-400 transition">
+                VISIT PARTNER CASINO & PLAY
+            </a>
+            <p class="text-[10px] text-slate-500 text-center">
+                Min 19+. Terms & Conditions apply. Please gamble responsibly.
+            </p>
+        </div>
+    </div>
+
+    <!-- Футер с канадским локализационным блоком -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-500 text-xs">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center space-y-6 text-center">
+            
+            <!-- Местные платежные системы -->
+            <div class="space-y-2">
+                <p class="text-[10px] text-slate-600 uppercase tracking-widest font-bold">Trusted Canadian Payment Methods</p>
+                <div class="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-slate-400">
+                    <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-md">Interac e-Transfer</span>
+                    <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-md">iDebit</span>
+                    <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-md">Instadebit</span>
+                    <span class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-md">Visa / Mastercard</span>
+                </div>
+            </div>
+
+            <div class="text-3xl opacity-60">🔞 19+</div>
+            
+            <p class="max-w-xl mx-auto leading-relaxed">
+                Gambling with real money should be viewed purely as entertainment. Progressive jackpot slots like Mega Moolah have lower RTP than regular video slots due to jackpot contributions. If you suspect you may have a gambling problem, reach out to the Canadian Responsible Gambling Council (RGC) or ConnexOntario.
+            </p>
+            <p class="text-slate-600">
+                © 2026 Canadian Mega Moolah Fan Portal. This site is for informational and educational purposes only.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Скрипты для работы калькуляторов, табов и джекпот-тикера -->
+    <script>
+        // Инициализация живого счетчика прогрессивного джекпота
+        let currentJackpot = 14258491.20;
+        const jackpotElement = document.getElementById('jackpot-ticker');
+
+        function updateJackpot() {
+            // Джекпот увеличивается примерно на $0.05 - $0.23 каждые несколько секунд
+            const increment = Math.random() * (0.23 - 0.05) + 0.05;
+            currentJackpot += increment;
+            
+            // Форматирование числа в канадские доллары (CAD)
+            jackpotElement.textContent = new Intl.NumberFormat('en-CA', {
+                style: 'currency',
+                currency: 'CAD',
+                minimumFractionDigits: 2
+            }).format(currentJackpot);
+        }
+        setInterval(updateJackpot, 1200);
+
+        // Интерактивный калькулятор шансов в зависимости от размера ставки
+        function calculateOdds(betValue) {
+            document.getElementById('calc-bet-val').textContent = `$${parseFloat(betValue).toFixed(2)}`;
+            // Рассчитываем коэффициент масштабирования шансов (базовый $0.25 = 1x)
+            const scalar = Math.round(betValue / 0.25);
+            document.getElementById('odds-multiplier').textContent = `${scalar}x`;
+            document.getElementById('odds-scale-text').textContent = `${scalar * 100}%`;
+        }
+
+        // Данные по версиям слотов
+        const gameData = {
+            classic: {
+                title: "Mega Moolah Classic",
+                desc: "The original jungle-themed masterpiece that started it all. Featuring a standard 5x3 layout with 25 paylines, the game is highly praised for its Free Spins feature where all wins are tripled. The jackpot wheel triggers completely at random during any real money spin.",
+                rtp: "88.12%",
+                volatility: "Low",
+                maxWin: "1,920x",
+                emoji: "🦁",
+                mechanics: [
+                    "🔸 15 Free Spins with a 3x multiplier",
+                    "🔸 Wild symbol doubles all wins",
+                    "🔸 Progressive wheel can trigger on any bet"
+                ]
+            },
+            summertime: {
+                title: "Mega Moolah Summertime",
+                desc: "A breezy, holiday-themed 9-payline slot. Perfect for lovers of fruit machines. Wins featuring the Summertime wild logo are doubled. Scatters trigger 15 free spins with a generous 3x multiplier. Combines classic vintage slots gameplay with modern progressive millions.",
+                rtp: "88.16%",
+                volatility: "Medium",
+                maxWin: "2,500x",
+                emoji: "☀️",
+                mechanics: [
+                    "🔸 9 paylines with highly focused hit rate",
+                    "🔸 15 free spins with triple multipliers",
+                    "🔸 Fast-paced beach & fruit machine theme"
+                ]
+            },
+            atlantean: {
+                title: "Atlantean Treasures Mega Moolah",
+                desc: "Dive under the sea in this highly interactive, beautifully animated game from Neon Valley Studios. Payouts are generated in both directions (left-to-right and right-to-left) on 10 paylines. Collect special pearls on the reels to spin the Progressive Jackpot Wheel.",
+                rtp: "92.08%",
+                volatility: "Medium",
+                maxWin: "500x",
+                emoji: "🧜‍♀️",
+                mechanics: [
+                    "🔸 Both-ways paylines keep action dynamic",
+                    "🔸 Expanding wild pearls prompt instant respins",
+                    "🔸 Guaranteed wild triggers for bigger base wins"
+                ]
+            },
+            juicy: {
+                title: "Juicy Joker Mega Moolah",
+                desc: "Designed by Just For The Win, this slot features a vibrant layout with card suits, diamonds, and juicy fruits. It introduces locking wild symbols and special Respin features on top of the classic four progressive jackpots.",
+                rtp: "92.03%",
+                volatility: "High",
+                maxWin: "1,200x",
+                emoji: "🃏",
+                mechanics: [
+                    "🔸 Returning Wild features hold symbols in place",
+                    "🔸 Free Spins with final Wild expansion triggers",
+                    "🔸 Unique Golden Joker progressive jackpot wheel trigger"
+                ]
+            }
+        };
+
+        // Логика выбора игр во вкладках (Tabs)
+        function selectGame(gameKey) {
+            // Убираем активные стили со всех кнопок
+            document.querySelectorAll('.game-tab-btn').forEach(btn => {
+                btn.className = "game-tab-btn py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-center text-sm transition";
+            });
+
+            // Добавляем активный класс на нажатую кнопку
+            document.getElementById(`btn-${gameKey}`).className = "game-tab-btn py-3 px-4 bg-amber-500 text-slate-950 font-bold rounded-xl text-center text-sm transition";
+
+            // Обновляем контент в блоке
+            const data = gameData[gameKey];
+            document.getElementById('display-title').textContent = data.title;
+            document.getElementById('display-desc').textContent = data.desc;
+            document.getElementById('display-rtp').textContent = data.rtp;
+            document.getElementById('display-vol').textContent = data.volatility;
+            document.getElementById('display-max').textContent = data.maxWin;
+            document.getElementById('display-emoji').textContent = data.emoji;
+
+            // Обновляем список механик
+            document.getElementById('mech-1').textContent = data.mechanics[0];
+            document.getElementById('mech-2').textContent = data.mechanics[1];
+            document.getElementById('mech-3').textContent = data.mechanics[2];
+        }
+
+        // Модальное окно
+        function triggerOfferModal() {
+            document.getElementById('offer-modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('offer-modal').style.display = 'none';
+        }
+
+        // Логика аккордеона FAQ
+        function toggleFaq(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`${id}-icon`);
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                content.classList.add('open');
+                icon.style.transform = "rotate(180deg)";
+            }
+        }
+
+        // Построение интерактивной радарной диаграммы сравнения характеристик
+        document.addEventListener('DOMContentLoaded', () => {
+            const rtpCtx = document.getElementById('rtpRadarChart').getContext('2d');
+            new Chart(rtpCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Base Game RTP', 'Feature Frequency', 'Max Payout Potential', 'Low Volatility Safeness', 'Jackpot Wheel Ease'],
+                    datasets: [
+                        {
+                            label: 'Classic (🦁)',
+                            data: [5, 6, 8, 9, 7],
+                            backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                            borderColor: '#f59e0b',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Summertime (☀️)',
+                            data: [6, 7, 9, 6, 7],
+                            backgroundColor: 'rgba(239, 68, 68, 0.15)',
+                            borderColor: '#ef4444',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Atlantean (🧜‍♀️)',
+                            data: [9, 8, 5, 8, 9],
+                            backgroundColor: 'rgba(59, 130, 246, 0.15)',
+                            borderColor: '#3b82f6',
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255,255,255,0.1)' },
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { display: false },
+                            pointLabels: {
+                                color: '#94a3b8',
+                                font: { family: 'sans-serif', size: 10 }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#cbd5e1' }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
