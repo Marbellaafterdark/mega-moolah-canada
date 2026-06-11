@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,24 +44,6 @@
             max-height: 300px;
         }
     </style>
-    <!-- Chosen Palette: Dark Luxury Gold (Background: Slate-950, Cards: Slate-900, Borders: Amber-500/20, Accents: Amber-500 & Orange-500) -->
-    <!-- Application Structure Plan: 
-         Интерактивный хаб разбит на логические секции для идеального закрытия поискового интента:
-         1. Hero-блок с живым счетчиком прогрессивного джекпота (FOMO-триггер для канадцев).
-         2. Промо-оффер на 80 бесплатных спинов (главный коммерческий интент).
-         3. Интерактивный переключатель версий Mega Moolah (Classic, Summertime, Atlantean Treasures, Juicy Joker) с детальным разбором механик.
-         4. Интерактивный калькулятор шансов в зависимости от размера ставки (Tips section).
-         5. Аналитический график RTP и волатильности (Chart.js) для опытных игроков.
-         6. Локализованные канадские платежные системы и FAQ.
-    -->
-    <!-- Visualization & Content Choices:
-         - Прогрессивный джекпот -> Живой скрипт на JS -> Постоянное увеличение счетчика для создания динамики.
-         - Сравнение версий игры -> Табы (Classic, Summertime, Atlantean, Juicy) -> Быстрое переключение контента без перезагрузки.
-         - Калькулятор шансов -> Ползунок (input range) + JS расчет -> Наглядно показывает связь размера ставки с шансом активации Jackpot Wheel.
-         - Сравнение RTP -> Лепестковая диаграмма (Radar Chart.js) -> Сравнение ключевых характеристик игр семейства.
-         - FAQ -> Интерактивный аккордеон на JS -> Удобное чтение ответов.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
@@ -69,7 +51,6 @@
     <header class="bg-slate-900/90 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center">
-                <!-- Очищенный логотип-ссылка без onerror/резервного смайлика льва -->
                 <a href="https://mega-moolah.app/en/" class="flex items-center gap-3 group">
                     <img src="https://mega-moolah.app/pics/logo.webp" alt="play mega moolah canada" class="h-8 w-auto object-contain transition transform group-hover:scale-105">
                     <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-orange-400 transition">
@@ -88,11 +69,7 @@
 
     <main class="max-w-6xl mx-auto px-4 py-8 space-y-16">
 
-        <!-- Вводный параграф для контекста всей страницы -->
         <section class="text-center max-w-3xl mx-auto space-y-4">
-            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                🍁 Canadian Player Hub 2026
-            </span>
             <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
                 Unlock the Legend of <br/>
                 <span class="bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent pulse-glow">
@@ -104,7 +81,6 @@
             </p>
         </section>
 
-        <!-- Блок прогрессивного джекпота в реальном времени -->
         <section class="bg-gradient-to-b from-slate-900 to-slate-950 border border-amber-500/20 rounded-3xl p-8 text-center relative overflow-hidden shadow-2xl">
             <div class="absolute -top-10 -left-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl"></div>
@@ -118,7 +94,6 @@
             </p>
         </section>
 
-        <!-- Блок промо: 80 бесплатных спинов (Коммерческий интент) -->
         <section id="promo" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-10">
             <div class="lg:col-span-7 space-y-6">
                 <span class="bg-red-500/10 text-red-400 border border-red-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
@@ -144,14 +119,11 @@
                     <div>✅ No wagering on Jackpot wins</div>
                     <div>✅ Fully optimized for mobile/tablet</div>
                 </div>
-                <!-- Замена кнопки CTA на внешнюю ссылку -->
                 <a href="https://mega-moolah.app/en/" target="_blank" class="block w-full py-4 bg-slate-950 hover:bg-slate-900 text-amber-400 font-extrabold rounded-xl tracking-wider transition transform hover:scale-[1.02] active:scale-[0.98] text-center">
                     CLAIM 80 FREE SPINS NOW
                 </a>
             </div>
         </section>
-
-        <!-- Интерактивный переключатель версий Mega Moolah (Инфо + Навигация) -->
         <section id="games" class="space-y-6">
             <div class="text-center max-w-2xl mx-auto space-y-2">
                 <h2 class="text-3xl font-extrabold">The Mega Moolah Game Suite</h2>
@@ -160,7 +132,6 @@
                 </p>
             </div>
 
-            <!-- Кнопки выбора игры -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
                 <button onclick="selectGame('classic')" id="btn-classic" class="game-tab-btn py-3 px-4 bg-amber-500 text-slate-950 font-bold rounded-xl text-center text-sm transition">
                     🦁 Classic
@@ -178,7 +149,6 @@
 
             <!-- Блок динамического контента -->
             <div id="game-display" class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <!-- Описание (слева) -->
                 <div class="space-y-4">
                     <h3 id="display-title" class="text-2xl font-extrabold text-amber-400">Mega Moolah Classic</h3>
                     <p id="display-desc" class="text-slate-300 text-sm leading-relaxed">
@@ -208,7 +178,6 @@
                         <li id="mech-2" class="flex items-center gap-2">🔸 Wild symbol doubles all wins</li>
                         <li id="mech-3" class="flex items-center gap-2">🔸 Progressive wheel can trigger on any bet</li>
                     </ul>
-                    <!-- Замена кнопки игры на внешнюю ссылку -->
                     <a href="https://mega-moolah.app/en/" target="_blank" class="block px-6 py-2 bg-amber-500 text-slate-950 font-bold rounded-lg text-sm hover:bg-amber-400 transition w-full max-w-xs text-center">
                         Play This Version
                     </a>
@@ -216,7 +185,6 @@
             </div>
         </section>
 
-        <!-- Блок Tips и Интерактивный калькулятор шансов -->
         <section id="tips" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div class="space-y-6">
                 <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
@@ -242,8 +210,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Интерактивный калькулятор -->
             <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-6">
                 <h3 class="text-xl font-bold text-slate-200 text-center">Jackpot Trigger Probability Simulator</h3>
                 <p class="text-xs text-slate-400 text-center">Drag the slider to adjust your bet size and see the estimated probability scalar.</p>
@@ -272,7 +238,6 @@
             </div>
         </section>
 
-        <!-- Аналитический график RTP (Chart.js) -->
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-5 space-y-4">
                 <h2 class="text-3xl font-extrabold">RTP & Feature Comparison</h2>
@@ -291,7 +256,6 @@
             </div>
         </section>
 
-        <!-- Часто задаваемые вопросы (FAQ Accordion) -->
         <section id="faq" class="space-y-6 max-w-4xl mx-auto">
             <div class="text-center space-y-2">
                 <h2 class="text-3xl font-extrabold">Frequently Asked Questions</h2>
@@ -339,7 +303,6 @@
 
     </main>
 
-    <!-- Модальное окно для призыва к действию (Конверсия) -->
     <div id="offer-modal" class="fixed inset-0 bg-slate-950/85 z-[100] hidden items-center justify-center p-4 backdrop-blur-sm">
         <div class="bg-slate-900 border border-amber-500/30 rounded-3xl p-6 md:p-8 max-w-md w-full relative space-y-6 shadow-2xl">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-500 hover:text-slate-200 text-lg">✕</button>
@@ -362,7 +325,6 @@
                 </div>
             </div>
 
-            <!-- Обновление ссылки в модальном окне -->
             <a href="https://mega-moolah.app/en/" target="_blank" class="block w-full py-3 bg-amber-500 text-slate-950 font-extrabold rounded-xl text-center text-sm tracking-wider hover:bg-amber-400 transition">
                 VISIT PARTNER CASINO & PLAY
             </a>
@@ -372,11 +334,9 @@
         </div>
     </div>
 
-    <!-- Футер с канадским локализационным блоком -->
     <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-500 text-xs">
         <div class="max-w-6xl mx-auto px-4 flex flex-col items-center space-y-6 text-center">
             
-            <!-- Местные платежные системы -->
             <div class="space-y-2">
                 <p class="text-[10px] text-slate-600 uppercase tracking-widest font-bold">Trusted Canadian Payment Methods</p>
                 <div class="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-slate-400">
@@ -398,18 +358,14 @@
         </div>
     </footer>
 
-    <!-- Скрипты для работы калькуляторов, табов и джекпот-тикера -->
     <script>
-        // Инициализация живого счетчика прогрессивного джекпота
         let currentJackpot = 14258491.20;
         const jackpotElement = document.getElementById('jackpot-ticker');
 
         function updateJackpot() {
-            // Джекпот увеличивается примерно на $0.05 - $0.23 каждые несколько секунд
             const increment = Math.random() * (0.23 - 0.05) + 0.05;
             currentJackpot += increment;
             
-            // Форматирование числа в канадские доллары (CAD)
             jackpotElement.textContent = new Intl.NumberFormat('en-CA', {
                 style: 'currency',
                 currency: 'CAD',
@@ -418,10 +374,8 @@
         }
         setInterval(updateJackpot, 1200);
 
-        // Интерактивный калькулятор шансов в зависимости от размера ставки
         function calculateOdds(betValue) {
             document.getElementById('calc-bet-val').textContent = `$${parseFloat(betValue).toFixed(2)}`;
-            // Рассчитываем коэффициент масштабирования шансов (базовый $0.25 = 1x)
             const scalar = Math.round(betValue / 0.25);
             document.getElementById('odds-multiplier').textContent = `${scalar}x`;
             document.getElementById('odds-scale-text').textContent = `${scalar * 100}%`;
@@ -483,17 +437,13 @@
             }
         };
 
-        // Логика выбора игр во вкладках (Tabs)
         function selectGame(gameKey) {
-            // Убираем активные стили со всех кнопок
             document.querySelectorAll('.game-tab-btn').forEach(btn => {
                 btn.className = "game-tab-btn py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-center text-sm transition";
             });
 
-            // Добавляем активный класс на нажатую кнопку
             document.getElementById(`btn-${gameKey}`).className = "game-tab-btn py-3 px-4 bg-amber-500 text-slate-950 font-bold rounded-xl text-center text-sm transition";
 
-            // Обновляем контент в блоке
             const data = gameData[gameKey];
             document.getElementById('display-title').textContent = data.title;
             document.getElementById('display-desc').textContent = data.desc;
@@ -502,13 +452,11 @@
             document.getElementById('display-max').textContent = data.maxWin;
             document.getElementById('display-emoji').textContent = data.emoji;
 
-            // Обновляем список механик
             document.getElementById('mech-1').textContent = data.mechanics[0];
             document.getElementById('mech-2').textContent = data.mechanics[1];
             document.getElementById('mech-3').textContent = data.mechanics[2];
         }
 
-        // Модальное окно
         function triggerOfferModal() {
             document.getElementById('offer-modal').style.display = 'flex';
         }
@@ -516,7 +464,6 @@
             document.getElementById('offer-modal').style.display = 'none';
         }
 
-        // Логика аккордеона FAQ
         function toggleFaq(id) {
             const content = document.getElementById(id);
             const icon = document.getElementById(`${id}-icon`);
@@ -529,7 +476,6 @@
             }
         }
 
-        // Построение интерактивной радарной диаграммы сравнения характеристик
         document.addEventListener('DOMContentLoaded', () => {
             const rtpCtx = document.getElementById('rtpRadarChart').getContext('2d');
             new Chart(rtpCtx, {
